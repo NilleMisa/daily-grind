@@ -91,7 +91,7 @@
 				let myReturn = "";
 				
 				myReturn += `<p> 
-							<img src="images/${coffee.pic}" alt="${coffee.alt}" /> 
+							<img src="images/${coffee.pic}" alt="${coffee.alt}" id="coffee" /> 
 
 							<strong>${coffee.weekday}'s Coffee Special:</strong> ${coffee.weekday}'s daily coffee special is <strong>${coffee.coffee}</strong>, ${coffee.description}
 							</p>`;
@@ -125,6 +125,14 @@
 			switch(today){
 				case 0:
 					today = "Sunday";
+					coffee = {
+						pic: "drip.jpg",	
+						alt: "A pic of Drip",
+						color: "light green",
+						description: `If you want drip then i got it`,
+						coffee: "Drip",
+						weekday: "Sunday"					
+					}
 				break;
 
 				case 1:
